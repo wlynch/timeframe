@@ -14,6 +14,7 @@ $arr->add(3,4);
 //$arr->add(1,2);
 $arr->remove(1,2);
 $arr->add(3,5);
+$arr->add(3,4);
 
 print_r($arr);
 
