@@ -2,6 +2,8 @@
 require_once '../src/Google_Client.php';
 require_once '../src/contrib/Google_CalendarService.php';
 require_once 'oauth-settings.php';
+require_once '../backend/mongo.php';
+
 session_start();
 
 $client = new Google_Client();
@@ -33,7 +35,8 @@ if (isset($_SESSION['token'])) {
 
 if ($client->getAccessToken()) {
     $calList = $cal->calendarList->listCalendarList();
-    print "<h1>Calendar List</h1><pre>" . print_r($calList, true) . "</pre>";
+    $jsons = json_decode($calList);
+    print "<h1>Calendar List</h1><pre>" . print_r($jsons, true) . "</pre>";
         
     print "<a href=\"".$_SERVER['PHP_SELF']."?logout=true\">Logout</a>";
     $_SESSION['token'] = $client->getAccessToken();
@@ -41,3 +44,17 @@ if ($client->getAccessToken()) {
     $authUrl = $client->createAuthUrl();
     print "<a class='login' href='$authUrl'>Connect Me!</a>";
 }
+
+//-----------------------------------------------------------------------------
+/*
+$collection = $db->selectCollection('collection name please replace');
+$JSONdata = $cal->calendarList->listCalendarList();
+$rests = json_decode($JSONdata);
+
+
+function processJSON($jsonData, $collection) {
+
+    
+}
+
+*/
