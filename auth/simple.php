@@ -2,7 +2,7 @@
 require_once '../src/Google_Client.php';
 require_once '../src/contrib/Google_CalendarService.php';
 require_once 'oauth-settings.php';
-require_once '../backend/mongo.php';
+//require_once '../backend/mongo.php';
 
 session_start();
 
