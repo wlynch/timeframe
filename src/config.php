@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+require_once ('oauth-settings.php');
 global $apiConfig;
 $apiConfig = array(
     // True if objects should be returned by the service classes.
@@ -22,18 +22,18 @@ $apiConfig = array(
     'use_objects' => false,
   
     // The application_name is included in the User-Agent HTTP header.
-    'application_name' => '',
+    'application_name' => 'Time Frame',
 
     // OAuth2 Settings, you can get these keys at https://code.google.com/apis/console
-    'oauth2_client_id' => '',
-    'oauth2_client_secret' => '',
-    'oauth2_redirect_uri' => '',
+    'oauth2_client_id' => 'client_id',
+    'oauth2_client_secret' => 'client_secret',
+    'oauth2_redirect_uri' => 'uri',
 
     // The developer key, you get this at https://code.google.com/apis/console
-    'developer_key' => '',
+    'developer_key' => 'api',
   
     // Site name to show in the Google's OAuth 1 authentication screen.
-    'site_name' => 'www.example.org',
+    'site_name' => 'wlyn.ch',
 
     // Which Authentication, Storage and HTTP IO classes to use.
     'authClass'    => 'Google_OAuth2',
