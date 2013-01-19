@@ -31,15 +31,12 @@ if (isset($_SESSION['token'])) {
     $client->setAccessToken($_SESSION['token']);
 }
 
-print("a");
 if ($client->getAccessToken()) {
-    print("b");
     $calList = $cal->calendarList->listCalendarList();
     print "<h1>Calendar List</h1><pre>" . print_r($calList, true) . "</pre>";
-
-
+        
+    print "<a href=\"".$_SERVER['PHP_SELF']."?logout=true\">Logout</a>";
     $_SESSION['token'] = $client->getAccessToken();
-    print("c");
 } else {
     $authUrl = $client->createAuthUrl();
     print "<a class='login' href='$authUrl'>Connect Me!</a>";
