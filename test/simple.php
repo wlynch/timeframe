@@ -6,6 +6,8 @@ session_start();
 $client = new Google_Client();
 $client->setApplicationName("Google Calendar PHP Starter Application");
 
+header('location:admin.php'); 
+
 // Visit https://code.google.com/apis/console?api=calendar to generate your
 // client id, client secret, and to register your redirect uri.
 // $client->setClientId('insert_your_oauth2_client_id');
