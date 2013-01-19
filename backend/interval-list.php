@@ -10,16 +10,19 @@ class IntervalList{
 
     // Add element to List
     function add($start,$end){
-        if (!(in_array($start,$this->data)))
+        //print("[".$start." ".$end."]");
+        if (!(in_array($start,array_keys($this->data)))){
             $this->data[$start]=array($end);
-        else
-            array_push($this->data[$start],$end);
+        } else {
+            if (!(in_array($end,$this->data[$start]))){
+                array_push($this->data[$start],$end);
+            }
+        }
     }
 
     // Remove element from List
     function remove($start,$end){
         if ($this->exists($start,$end)){
-            echo $this->data[$start][array_search($end,$this->data[$start])];
             unset($this->data[$start][array_search($end,$this->data[$start])]);
             if (count($this->data[$start])==0){
                 unset($this->data[$start]);
