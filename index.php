@@ -24,15 +24,19 @@
 
 				<div class="five columns">
 					<div row>
+						<h3>Groups</h3>
 						<!--Group Search Box!-->
-						<p>Search box</p>
-					</div>
+						<input type="text" placeholder="Search for a group"/>					</div>
 				</div>
 				<div class="seven columns">
+
+					<h3>Your Calendars</h3>
+
+					<input type="text" placeholder="Search for calendar"/>
 					<div class=row>
-						<div class="one columns">
-							<label for="checkbox1"><input type="checkbox" id="checkbox1" style="display:none;" class="support attribute"> Person's Name</label> 
-						</div>
+						<div class="four columns">
+     					 <label for="checkbox1"><input type="checkbox" id="checkbox1">Label for Checkbox</label>
+    					</div>
 					</div>
 				
 				</div>
