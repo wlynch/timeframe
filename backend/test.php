@@ -1,6 +1,18 @@
 <?php
 
-$arr=array("a"=>1,"a"=>2);
+include('./interval-list.php');
+
+
+$a=array("a");
+unset($a[0]);
+print_r($a);
+
+$arr = new IntervalList();
+
+$arr->add(1,2);
+$arr->add(3,4);
+//$arr->add(1,2);
+$arr->remove(1,2);
 
 print_r($arr);
 

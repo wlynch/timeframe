@@ -2,33 +2,36 @@
 
 class IntervalList{
 
-    $data=array();
+    public $data=array();
+
+    function __construct() {
+        $this->data=array();
+    }
 
     // Add element to List
     function add($start,$end){
-        if ($data[$start]==NULL)
-            array_push($data,$start=>array($end));
+        if (!(in_array($start,$this->data)))
+            $this->data[$start]=array($end);
         else
-            array_push($data[$start],$end);
+            array_push($this->data[$start],$end);
     }
 
     // Remove element from List
     function remove($start,$end){
-        if ($data[$start]!=NULL){
-            if (exists($start,$end)){
-                unset($data[$start][$end]);
-                if (count($data[$start]==0){
-                    unset(count($data[$start]));
-                } 
-                return true;
-            }
+        if ($this->exists($start,$end)){
+            echo $this->data[$start][array_search($end,$this->data[$start])];
+            unset($this->data[$start][array_search($end,$this->data[$start])]);
+            if (count($this->data[$start])==0){
+                unset($this->data[$start]);
+            } 
+            return true;
         }
         return false;
     }
 
     // See if key/value pair already exists in the list
     function exists($start, $end){
-        return $data[$start][$end]!=NULL
+        return array_key_exists($start,$this->data) && in_array($end,$this->data[$start]);
     }
 
 }
