@@ -18,7 +18,8 @@ html {
 		
 	);
 
-	background-repeat: 
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 }
 
 

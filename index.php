@@ -31,6 +31,7 @@
 					<input type="text" placeholder="Search for calendar"/>
 					<div class=row>
 						<div class="four columns">
+							<h3>Calendars</h3>
 							<?php 
 							//foreach ($calList->items as $key => $value) {
 							//	echo "<label for=\"checkbox1\"><input type=\"checkbox\" id=\"checkbox".$i.">".$value."</label>"
