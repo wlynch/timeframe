@@ -20,6 +20,7 @@
 			    </div>
 			</div>
 
+
 			<div class="row">
 
 				<div class="five columns">
@@ -35,7 +36,6 @@
 					<input type="text" placeholder="Search for calendar"/>
 					<div class=row>
 						<div class="four columns">
-							<h3>Calendars</h3>
 							<?php 
 							//foreach ($calList->items as $key => $value) {
 							//	echo "<label for=\"checkbox1\"><input type=\"checkbox\" id=\"checkbox".$i.">".$value."</label>"
@@ -43,9 +43,13 @@
 							?>
     					</div>
 					</div>
-				
 				</div>
 			</div>
+		</div> 
+		<div id="check" align="right" style="padding:20px">
+			<h3><u>Possible Schedules</h3></u>
+			<a href="www.google.com">Add to calendar here</a>
 		</div>
+
 	</body>
 </html>
