@@ -63,6 +63,13 @@ class DepthList{
     
     }
 
+    function getBestTime(){
+        foreach($this->data as $depth){
+            if (count($depth)>0){
+                return $this->data[$depth];
+            }
+        }
+    }
 }
 
 
